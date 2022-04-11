@@ -1,7 +1,6 @@
 package logic;
 
 public class Converter {
-    float temp;
 
     public double FToC (double temp) {
         temp = (temp - 32) * (5/9);
