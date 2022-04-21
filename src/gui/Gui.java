@@ -1,12 +1,15 @@
 package gui;
 
 import javax.swing.*;
-import java.awt.event.ActionListener;
+import java.awt.*;
 
 public class Gui {
-    static JFrame f;
-    static JTextField t;
+    static JFrame window;
+    static JLabel tempText;
+    static JTextField tempInput;
     static JButton b;
+    static JRadioButton rb1;
+    static JRadioButton rb2;
     static JLabel l;
 
     Gui()
@@ -15,11 +18,16 @@ public class Gui {
 
     public static void main (String[] args)
     {
-        JLabel inst = new JLabel("Enter a temperature to be converted");
         // frame to store the text field and button
-        f = new JFrame("textfield");
+        window = new JFrame("Temperature Converter");
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        tempText = new JLabel("Temperature to be Converted:");
+        tempText.setSize(50, 50);
+        rb1 = new JRadioButton("Celeus to Farenhype");
+        rb2 = new JRadioButton();
+
         // create label to display text
-        l = new JLabel("nothing entered");
+//        l = new JLabel("nothing entered");
         // create new button
         b = new JButton("Convert");
         // creates an object of the Gui class
@@ -27,22 +35,29 @@ public class Gui {
         // addActionListener to button
 //        b.addActionListener((ActionListener) g);
         // create a text field with 6 columns
-        t = new JTextField("Enter the temperature", 6);
+        tempInput = new JTextField("Enter the temperature", 6);
+        tempInput.setSize(50,10);
+
         // create a panel to add buttons and textfield
-        JPanel p = new JPanel();
+        JPanel mainPanel = new JPanel();
+//        mainPanel.setLayout(new GridLayout(3,2, 10, 10));
+        mainPanel.setLayout(new FlowLayout());
 
         // add buttons and textfield to panel
-        p.add(inst);
-        p.add(t);
-        p.add(b);
-        p.add(l);
+        mainPanel.add(tempText);
+        mainPanel.add(tempInput);
+        mainPanel.add(b);
+        mainPanel.add(rb1);
+        mainPanel.add(rb2);
+//        mainPanel.add(l);
 
         // add panel to frame
-        f.add(p);
+        window.add(mainPanel);
 
         // set the size of the frame
-        f.setSize(300, 300);
-        f.setVisible(true);
+        window.setSize(500, 300);
+//        window.setLayout(new GridLayout(3,2));
+        window.setVisible(true);
     }
 /*
     public static JFrame createGui()
