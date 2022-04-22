@@ -1,3 +1,6 @@
+/**
+ * This class creates the User Interface for the Temperature Converter
+ */
 package gui;
 
 import javax.swing.*;
@@ -14,6 +17,9 @@ public class Gui {
     static ButtonGroup rbg;
     static JLabel l;
 
+    /**
+     * This method creates the User Interface window for the Temperature Converter
+     */
     public static void createUI ()
     {
         // frame to store the text field and button
@@ -39,12 +45,9 @@ public class Gui {
         mainPanel.add(tempText);
         mainPanel.add(tempInput);
         mainPanel.add(convertB);
-//        mainPanel.add(rbg);
+
         mainPanel.add(rb1);
         mainPanel.add(rb2);
-//        mainPanel.add(l);
-
-        // add panel to frame
         window.add(mainPanel);
 
         // set the size of the frame
