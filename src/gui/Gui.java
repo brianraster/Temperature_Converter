@@ -14,11 +14,7 @@ public class Gui {
     static ButtonGroup rbg;
     static JLabel l;
 
-    Gui()
-    {
-    }
-
-    public static void main (String[] args)
+    public static void createUI ()
     {
         // frame to store the text field and button
         window = new JFrame("Temperature Converter");
