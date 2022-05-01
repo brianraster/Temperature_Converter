@@ -4,11 +4,8 @@
 package gui;
 
 import logic.Converter;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Gui {
     static JFrame window;
@@ -25,7 +22,6 @@ public class Gui {
      * This method creates the User Interface window for the Temperature Converter
      */
     public static void createUI () {
-        // frame to store the text field and button
         window = new JFrame("Temperature Converter");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         tempText = new JLabel("Temperature to be Converted:");
