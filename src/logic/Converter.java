@@ -10,10 +10,9 @@ public class Converter {
      * @param temp The temperature in Fahrenheit to convert
      * @return Temperature in Celsius
      */
-    public double FToC (double temp)
+    public static double FToC (double temp)
     {
-        temp = (temp - 32) * (5/9);
-        return temp;
+        return (temp - 32) * 5/9;
     }
 
     /**
@@ -21,7 +20,7 @@ public class Converter {
      * @param temp The temperature in Fahrenheit to convert
      * @return Temperature in Kelvin
      */
-    public double FToK (double temp)
+    public static double FToK (double temp)
     {
         temp = CToK(FToC(temp));
         return temp;
@@ -32,10 +31,9 @@ public class Converter {
      * @param temp The temperature in Celsius to convert
      * @return Temperature in Fahrenheit
      */
-    public double CToF (double temp)
+    public static double CToF (double temp)
     {
-        temp = temp * (9/5) + 32;
-        return temp;
+        return ((9 * temp)/5) + 32;
     }
 
     /**
@@ -43,7 +41,7 @@ public class Converter {
      * @param temp The temperature in Celsius to convert
      * @return Temperature in Kelvin
      */
-    public double CToK (double temp)
+    public static double CToK (double temp)
     {
         temp = temp + 273.15;
         return temp;
@@ -54,7 +52,7 @@ public class Converter {
      * @param temp The temperature in Kelvin to convert
      * @return Temperature in Celsius
      */
-    public double KToC (double temp)
+    public static double KToC (double temp)
     {
         temp = temp - 273.15;
         return temp;
@@ -65,9 +63,8 @@ public class Converter {
      * @param temp The temperature in Kelvin to convert
      * @return Temperature in Fahrenheit
      */
-    public double KToF (double temp)
+    public static double KToF (double temp)
     {
-        temp = CToF(KToC(temp));
-        return temp;
+        return CToF(KToC(temp));
     }
 }
