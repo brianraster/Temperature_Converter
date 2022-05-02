@@ -12,7 +12,11 @@ import gui.Gui;
 
 import javax.swing.*;
 
+/**
+ * The starting point of the program.
+ */
 public class Main {
+
     /**
      * This is the main function of the program.
      * @param args Unused
