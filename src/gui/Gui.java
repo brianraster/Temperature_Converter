@@ -41,12 +41,40 @@ public class Gui {
                 double result = Converter.CToF(tempNum);
                 String resultString = Double.toString(result);
                 tempOutput.setText(resultString);
-            }
-            else {
+            } else if (FtoC.isSelected()) {
                 convertedTemp.setVisible(true);
                 double result = Converter.FToC(tempNum);
                 String resultString = Double.toString(result);
                 tempOutput.setText(resultString);
+            } else if (CtoK.isSelected()) {
+                convertedTemp.setVisible(true);
+                double result = Converter.CToK(tempNum);
+                String resultString = Double.toString(result);
+                tempOutput.setText(resultString);
+            } else if (KtoC.isSelected()) {
+                convertedTemp.setVisible(true);
+                double result = Converter.KToC(tempNum);
+                String resultString = Double.toString(result);
+                tempOutput.setText(resultString);
+            } else if (KtoC.isSelected()) {
+                convertedTemp.setVisible(true);
+                double result = Converter.KToC(tempNum);
+                String resultString = Double.toString(result);
+                tempOutput.setText(resultString);
+            } else if (FtoK.isSelected()) {
+                convertedTemp.setVisible(true);
+                double result = Converter.FToK(tempNum);
+                String resultString = Double.toString(result);
+                tempOutput.setText(resultString);
+            } else if (KtoF.isSelected()) {
+                convertedTemp.setVisible(true);
+                double result = Converter.KToF(tempNum);
+                String resultString = Double.toString(result);
+                tempOutput.setText(resultString);
+            }
+            else {
+                convertedTemp.setText("Something went wrong...");
+                convertedTemp.setVisible(true);
             }
         });
         CtoF = new JRadioButton("Celsius to Fahrenheit");
@@ -55,13 +83,16 @@ public class Gui {
         KtoC = new JRadioButton("Kelvin to Celsius    ");
         FtoK = new JRadioButton("Fahrenheit to Kelvin ");
         KtoF = new JRadioButton("Kelvin to Fahrenheit ");
+
         ButtonGroup rbg = new ButtonGroup();
+
         rbg.add(CtoF);
         rbg.add(FtoC);
         rbg.add(CtoK);
         rbg.add(KtoC);
         rbg.add(FtoK);
         rbg.add(KtoF);
+
         tempInput = new JTextField(6);
         tempInput.setSize(50,10);
         convertedTemp = new JLabel("The converted temperature is: ");
