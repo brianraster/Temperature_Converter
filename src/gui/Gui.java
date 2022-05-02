@@ -1,12 +1,12 @@
-/**
- * This class creates the User Interface for the Temperature Converter
- */
 package gui;
 
 import logic.Converter;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class creates the User Interface for the Temperature Converter
+ */
 public class Gui {
     static JFrame window;
     static JPanel subPanel;
